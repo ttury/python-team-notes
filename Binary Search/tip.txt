@@ -1,0 +1,12 @@
+Sequential Search : O(N)
+Binary Search : O(LogN)
+
+처리해야 할 데이터 수가 1000만 단위 이상으로 넘어가면
+O(LogN)의 속도를 내야 하는 알고리즘을 떠올려야 함
+
+이렇게 입력 데이터가 많은 문제는 input() 대신
+sys 라이브러리의 readline() 함수를 이용해 입력받음
+
+sys 라이브러리를 사용할 때는 한 줄 입력받고 나서 rstrip()함수 꼭 호출
+readline()으로 입력하면 줄바꿈 문자(엔터)까지 저장
+rstrip()으로 줄바꿈 문자 제거
