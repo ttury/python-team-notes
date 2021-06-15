@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 field = [
   [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4)],
   [(1, 0), (1, 1), (1, 2), (1, 3), (1, 4)],
@@ -43,3 +44,19 @@ sections = GetSectionByShape(field, 3, 2)
 for section in sections:
   printMatrix(section)
   print("-----------")
+=======
+n, m = list(map(int, input().split()))
+money_value = [0] * (n + 1) # 1 ~ n 개
+for i in range(1, n + 1):
+  money_value[i] = int(input())
+
+d = [-1] * (m + 1) # 0 ~ m 개
+d[0] = 0
+
+for i in range(1, n + 1):
+  for j in range(money_value[i], m + 1):
+    if d[j - money_value[i]] >= 0:
+      d[j] = min(d[j], d[j - money_value[i]] + 1)
+
+print(d[m])
+>>>>>>> aaf683c8d66c577abe84a6a2fada9b76542eea24
